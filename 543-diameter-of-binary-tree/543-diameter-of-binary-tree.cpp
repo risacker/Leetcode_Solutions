@@ -12,7 +12,7 @@
 class Solution {
 public:
     int soln(TreeNode *root, int &maxm){
-        if(root==NULL)
+        if(root == NULL)
              return 0;
         int leftAns = soln(root->left, maxm);
         int rightAns = soln(root->right, maxm);
