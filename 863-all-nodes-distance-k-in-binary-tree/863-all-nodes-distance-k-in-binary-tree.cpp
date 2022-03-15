@@ -52,7 +52,7 @@ public:
             } 
             return b + 1;
         }
-        return 0;
+        return -1;
     }
     
     vector<int> distanceK(TreeNode* root, TreeNode* target, int k) {
