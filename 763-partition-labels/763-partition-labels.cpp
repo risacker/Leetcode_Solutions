@@ -1,7 +1,7 @@
 class Solution {
 public:
     vector<int> partitionLabels(string s) {
-        vector<int> last_idx(26);
+        vector<int> last_idx(26, 0);
         int sz = s.size();
         for(int i = 0;i < sz;i++){
             last_idx[s[i]-'a'] = i;
