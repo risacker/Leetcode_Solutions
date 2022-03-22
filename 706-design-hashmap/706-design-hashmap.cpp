@@ -11,7 +11,7 @@ public:
     {
         this->key = key;
         this->value  = value;
-        next =0;
+        next = 0;
     }
 };
 
@@ -19,20 +19,18 @@ class MyHashMap {
     Node* head;
 public:
     MyHashMap() {
-        head =0;
+        head = 0;
     }
     
     void put(int key, int value) 
     {
         Node* temp = head,*last{head};
-        int flag=0;
-        
+        int flag=0;   
         if(!head)
         {
             head = new Node(key,value);
             return ;
         }
-        
         while(temp)
         {
             if(temp->key == key)
@@ -42,34 +40,27 @@ public:
             }
             last= temp;
             temp= temp->next;
-        }
-        
+        }    
         if(flag==0)
         {
             last->next = new Node(key,value);    
         }
-    }
-    
-    int get(int key) {
-        
+    } 
+    int get(int key) {   
         Node* temp = head;
-        int flag=0;
-        
+        int flag = 0;     
         while(temp)
         {
             if(temp->key == key)
             {
                 return temp->value;
             }
-            temp = temp->next;
-        
+            temp = temp->next;   
         }
         return -1;
     }
-    
     void remove(int key) {
-        Node* temp = head,*last{head};
-        
+        Node* temp = head,*last{head};   
         while(temp)
         {
             if(temp->key == key)
@@ -78,12 +69,11 @@ public:
                 {
                     head = head->next;
                     return ;
-                }
-                
+                } 
                 last->next = temp->next;
             }
-            last= temp;
-            temp= temp->next;
+            last = temp;
+            temp = temp->next;
         }
     }
 };
