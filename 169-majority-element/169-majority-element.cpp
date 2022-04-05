@@ -1,9 +1,9 @@
 class Solution {
 public:
     int majorityElement(vector<int>& nums) {       
-        int cnt = 1;
+        /*int cnt = 1;
         int mxIdx = 0;      
-        for(int i=1; i<nums.size();i++){
+        for(int i = 1; i < nums.size();i++){
             if(nums[mxIdx] == nums[i]) 
                 cnt++;
             else 
@@ -13,6 +13,8 @@ public:
                 cnt = 1;
             }
         }
-        return nums[mxIdx];
+        return nums[mxIdx];*/
+        sort(nums.begin(), nums.end());
+        return nums[nums.size()/2];
     }
 };
