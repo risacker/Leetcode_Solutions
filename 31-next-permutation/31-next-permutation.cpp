@@ -17,7 +17,8 @@ public:
                 }
             } 
     	    swap(nums[k], nums[l]);// swap it
-    	    reverse(nums.begin() + k + 1, nums.end());//everything on right will be reversed using inbuilt stl 
+    	    reverse(nums.begin() + k + 1, nums.end());//everything on right will be reversed using inbuilt stl
+            //if reverse fucn is not allowedin the interview then use 2 pointer approach to reverse it
         }
     }
 };
