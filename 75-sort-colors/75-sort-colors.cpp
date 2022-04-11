@@ -1,10 +1,9 @@
 class Solution {
 public:
     void sortColors(vector<int>& nums) {
-        int lo = 0; 
-        int hi = nums.size() - 1; 
-        int mid = 0; 
-
+        int lo = 0;// low pointer is pointing to start 
+        int hi = nums.size() - 1;// high pointer is pointing to end
+        int mid = 0;// mid pointer is pointing to start
         while (mid <= hi) { 
             switch (nums[mid]) { 
 
