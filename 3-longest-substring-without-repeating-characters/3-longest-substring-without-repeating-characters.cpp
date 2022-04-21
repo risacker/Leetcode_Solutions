@@ -1,7 +1,7 @@
 class Solution {
 public:
     int lengthOfLongestSubstring(string s) {
-         if(s.length()==0)
+        if(s.length() == 0)
             return 0;
         int i = 0,j = 0;
         int maxLen = 0;
@@ -13,7 +13,7 @@ public:
                 j++;
             }
             s1.insert(c);
-            maxLen = max(maxLen,i-j+1);
+            maxLen = max(maxLen, i-j+1);
             i++;
         }
         return maxLen;
