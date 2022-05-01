@@ -1,6 +1,5 @@
 class Solution {
 public:    
-
     int reverse(int n) {
         long a = 0;
         while (n) {
