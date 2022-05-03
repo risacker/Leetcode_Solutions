@@ -15,6 +15,6 @@ public:
         } 
         if(len == n)
             return 0;
-        return m- len + 1;
+        return m - len + 1;
     }
 };
