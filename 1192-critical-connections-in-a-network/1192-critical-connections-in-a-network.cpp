@@ -23,7 +23,7 @@ public:
                 ans.push_back({curr, next});
         }
     }
-
+private:
     vector<int> disc{0}, low{0};
     int time = 1;
     vector<vector<int>> ans;
