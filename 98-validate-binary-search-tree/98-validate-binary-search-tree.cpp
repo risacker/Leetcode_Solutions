@@ -21,7 +21,7 @@ public:
     
     bool isValidBST(TreeNode* root) {
         long long small = LONG_MIN;
-        long long large= LONG_MAX;
+        long long large = LONG_MAX;
         return isValid(root, small, large);
     }
 };
