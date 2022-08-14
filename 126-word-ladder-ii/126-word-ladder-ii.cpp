@@ -32,7 +32,7 @@ public:
         }
         // BFS  
         int start_node = 0, target_node = wti[endWord], r = 0, min_step = INT_MAX;
-        vector<int> vis(wordList.size(), INT_MAX) ;   
+        vector<int> vis(wordList.size(), INT_MAX);   
         vis[start_node] = 0;
         queue<int> q;   
         q.push(start_node);
@@ -46,7 +46,7 @@ public:
                 for(int j = 0; j < edges[fr].size(); j++){
                     int update_node = edges[fr][j];
                     if(r + 1 < vis[update_node]){
-                        vis[update_node] = r + 1 ;
+                        vis[update_node] = r + 1;
                         q.push(update_node);
                     }
                 }
@@ -61,7 +61,7 @@ public:
         while(r){
              int sz  = q2.size() ;
              for(int i = 0; i < sz; i++){
-                vector<string> seq = q2.front() ;
+                vector<string> seq = q2.front();
                 q2.pop();
                 string back = seq.back();
                 int curr = wti[back];
@@ -80,7 +80,7 @@ public:
         while(!q2.empty()){
             vector<string> temp = q2.front();
             q2.pop() ;
-            reverse(begin(temp) , end(temp)) ;
+            reverse(begin(temp), end(temp)) ;
             ans.push_back(temp);
         }
         return ans;
